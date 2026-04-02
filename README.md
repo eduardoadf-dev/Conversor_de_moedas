@@ -61,12 +61,10 @@ convert-money/
 
 ## ⚙️ Como Usar
 
-1. **Clone ou baixe** o repositório
-2. Abra o arquivo `index.html` no navegador (não é necessário servidor)
-3. Selecione a moeda de destino no campo **"Converter para"**
-4. Digite o valor em reais no campo **"Valor"**
-5. Clique no botão **"Converter"**
-6. O resultado aparece na seção inferior com as duas moedas
+1. Selecione a moeda de destino no campo **"Converter para"**
+2. Digite o valor em reais no campo **"Valor"**
+3. Clique no botão **"Converter"**
+4. O resultado aparece na seção inferior com as duas moedas
 
 ---
 
@@ -95,11 +93,9 @@ A aplicação se adapta a telas menores que **500px** de largura, reduzindo o co
 
 ---
 
-## 🔮 Possíveis Melhorias Futuras
+## 🔮 Melhorias Futuras
 
 - Integração com uma API de câmbio em tempo real (ex: [AwesomeAPI](https://docs.awesomeapi.com.br/))
 - Suporte a mais moedas
 - Conversão nos dois sentidos (não só a partir do Real)
 - Histórico de conversões
-
----
