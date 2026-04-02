@@ -5,7 +5,7 @@ Conversor de moedas simples e intuitivo que permite converter valores em **Real 
 ---
 
 🚀 Demonstração
-Link do Projeto: https://eduardoadf-dev-convertmoney.vercel.app/
+Link do Projeto: https://eduardoadf-dev.github.io/Conversor_de_moedas/
 
 ---
 
