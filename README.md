@@ -4,7 +4,8 @@ Conversor de moedas simples e intuitivo que permite converter valores em **Real 
 
 ---
 
-🚀 Demonstração
+## 🚀 Demonstração
+
 Link do Projeto: https://eduardoadf-dev.github.io/Conversor_de_moedas/
 
 ---
@@ -102,7 +103,3 @@ A aplicação se adapta a telas menores que **500px** de largura, reduzindo o co
 - Histórico de conversões
 
 ---
-
-## 📄 Licença
-
-Este projeto é de uso livre para fins educacionais.
