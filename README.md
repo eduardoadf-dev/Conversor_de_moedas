@@ -16,7 +16,7 @@ A aplicação exibe o valor original em reais e o valor convertido na moeda esco
 
 ---
 
-## 🚀 Funcionalidades
+## ✨ Funcionalidades
 
 - Conversão de **Real Brasileiro (BRL)** para:
   - 🇺🇸 Dólar Americano (USD)
