@@ -36,6 +36,8 @@ const convertValues = () => {
   const currencyTo = currencySelect2.value
 
   if (currencyFrom === currencyTo) {
+    // Botão estará desabilitado, mas caso a função seja chamada,
+    // podemos evitar a conversão redundante aqui também.
     alert('Por favor, escolha moedas diferentes para a conversão.')
     return
   }
@@ -75,9 +77,25 @@ const changeCurrencyFrom = () => {
   convertValues()
 }
 
-currencySelect2.addEventListener('change', changeCurrency)
-currencySelect1.addEventListener('change', changeCurrencyFrom)
+const checkCurrencyEquality = () => {
+  const currencyFrom = currencySelect1.value
+  const currencyTo = currencySelect2.value
+
+  convertButton.disabled = (currencyFrom === currencyTo)
+}
+
+currencySelect1.addEventListener('change', () => {
+  changeCurrencyFrom()
+  checkCurrencyEquality()
+})
+
+currencySelect2.addEventListener('change', () => {
+  changeCurrency()
+  checkCurrencyEquality()
+})
+
 convertButton.addEventListener('click', convertValues)
+
 inputCurrency.addEventListener('keydown', event => {
   if (event.key === 'Enter') {
     convertValues()
@@ -87,5 +105,6 @@ inputCurrency.addEventListener('keydown', event => {
 window.addEventListener('load', () => {
   changeCurrencyFrom()
   changeCurrency()
+  checkCurrencyEquality()
   // Não chama convertValues aqui para evitar alerta no carregamento
 })

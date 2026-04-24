@@ -19,6 +19,7 @@ body{
 
 main{
     width: 375px;
+    height: auto;
     background: #F4F4F4;
     border-radius: 20px;
     margin: 0 auto 40px; 
@@ -66,6 +67,11 @@ button:hover{
 
 button:active{
     opacity: 0.6;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 section{
