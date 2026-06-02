@@ -1,6 +1,6 @@
 # 💱 Conversor de Moedas
 
-Conversor de moedas simples e intuitivo que permite converter valores em **Real Brasileiro (BRL)** para Dólar Americano, Euro ou Libra Esterlina e vice-versa.
+Um conversor de moedas simples e intuitivo que permite converter valores em **Real Brasileiro (BRL)** para Dólar Americano, Euro ou Libra Esterlina e vice-versa.
 
 ---
 
