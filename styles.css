@@ -1,4 +1,3 @@
-
 *{
      margin: 0;
      padding: 0;
@@ -14,7 +13,7 @@ body{
 .logo{
     width: auto;
     height: auto;
-    display: block;
+    display: flex;
     margin: 10px auto;
 }
 
@@ -34,7 +33,7 @@ label{
 }
 
 select, input{ 
-    display: block;
+    display: flex;
     background: #FFFFFF;
     border: 1px solid #BBBBBB;
     border-radius: 4px;
