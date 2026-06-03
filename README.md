@@ -1,101 +1,127 @@
-# 💱 Conversor de Moedas
+# 💱 Convert Money
 
-Um conversor de moedas simples e intuitivo que permite converter valores em **Real Brasileiro (BRL)** para Dólar Americano, Euro ou Libra Esterlina e vice-versa.
+Conversor de moedas com cotações em tempo real, desenvolvido com HTML, CSS e JavaScript puro.
 
----
-
-## 🚀 Demonstração
-
-Link do Projeto: https://eduardoadf-dev.github.io/Conversor_de_moedas/
-
----
-
-## 📸 Visão Geral
-
-A aplicação exibe o valor original em reais e o valor convertido na moeda escolhida, com formatação monetária adequada para cada país.
+![Convert Money Preview](./assets/Conversor-moedas.png)
 
 ---
 
 ## ✨ Funcionalidades
 
-- Conversão de **Real Brasileiro (BRL)** para:
-  - 🇺🇸 Dólar Americano (USD)
-  - 🇪🇺 Euro (EUR)
-  - 🇬🇧 Libra Esterlina (GBP)
-- Formatação de moeda localizada (pt-BR, en-US, de-DE, en-GB)
-- Atualização dinâmica da imagem e nome da moeda ao trocar a seleção
-- Interface responsiva para dispositivos móveis
+- Conversão entre **Real Brasileiro**, **Dólar Americano**, **Euro** e **Libra Esterlina**
+- Cotações em **tempo real** via [ExchangeRate-API Open Access](https://www.exchangerate-api.com/docs/free) — sem necessidade de chave de API
+- Feedback visual durante a busca da cotação ("Buscando...")
+- Formatação de valores no padrão brasileiro com `Intl.NumberFormat`
+- Bloqueio automático do botão quando as moedas selecionadas são iguais
+- Conversão acionada tanto pelo botão quanto pela tecla **Enter**
+- Layout responsivo para dispositivos móveis
 
 ---
 
-## 🗂️ Estrutura do Projeto
+## 🖥️ Demonstração
+
+> Selecione as moedas, digite o valor e clique em **Converter** — ou pressione Enter.
+
+🔗 Link do projeto: https://eduardoadf-dev.github.io/Conversor_de_moedas/
+
+---
+
+## 🗂️ Estrutura do projeto
 
 ```
 convert-money/
-│
-├── index.html          # Estrutura da página
-├── styles.css          # Estilização visual
-├── scripts.js          # Lógica de conversão
-│
+├── index.html
+├── styles.css
+├── scripts.js
 └── assets/
-    ├── tio-patinhas.gif  # Logo animado
-    ├── Real.png          # Ícone do Real
-    ├── Dólar.png         # Ícone do Dólar
-    ├── Euro.png          # Ícone do Euro
-    ├── Libra.png         # Ícone da Libra
-    └── Arrow.png         # Seta de conversão
+    ├── tio-patinhas.gif
+    ├── Real.png
+    ├── Dólar.png
+    ├── Euro.png
+    ├── Libra.png
+    └── Arrow.png
 ```
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🚀 Como usar
 
-| Tecnologia | Uso |
-|---|---|
-| HTML5 | Estrutura da página |
-| CSS3 | Estilização e responsividade |
-| JavaScript (Vanilla) | Lógica de conversão e manipulação do DOM |
-| Google Fonts (Roboto) | Tipografia |
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/eduardoadf-dev/Conversor_de_moedas.git
+   ```
 
----
+2. Acesse a pasta:
+   ```bash
+   cd Conversor_de_moedas
+   ```
 
-## ⚙️ Como Usar
+3. Abra o `index.html` diretamente no navegador — não precisa de servidor ou instalação.
 
-1. Selecione a moeda de destino no campo **"Converter para"**
-2. Digite o valor em reais no campo **"Valor"**
-3. Clique no botão **"Converter"**
-4. O resultado aparece na seção inferior com as duas moedas
+> O projeto usa a API Open Access da ExchangeRate-API, que não exige cadastro nem chave de API. Apenas uma conexão com a internet é necessária para buscar as cotações.
 
 ---
 
-## 💡 Como Funciona
+## 🔌 API utilizada
 
-### Conversão (`convertValues`)
-Captura o valor digitado, formata o valor em BRL usando `Intl.NumberFormat` e divide pelo câmbio fixo correspondente à moeda selecionada.
-
-### Troca de moeda (`changeCurrency`)
-Ao mudar o `<select>`, atualiza o nome e a imagem da moeda de destino e já recalcula o valor convertido automaticamente.
-
-### Taxas de câmbio utilizadas
-> ⚠️ As cotações são fixas no código e não são atualizadas em tempo real.
-
-| Moeda | Cotação (por R$1) |
+| Propriedade | Detalhe |
 |---|---|
-| Dólar (USD) | R$ 5,21 |
-| Euro (EUR) | R$ 6,05 |
-| Libra (GBP) | R$ 7,00 |
+| Serviço | [ExchangeRate-API — Open Access](https://www.exchangerate-api.com/docs/free) |
+| Autenticação | Nenhuma (sem chave de API) |
+| Atualização | 1 vez por dia |
+| Endpoint usado | `https://open.er-api.com/v6/latest/{moeda_base}` |
+
+**Exemplo de requisição:**
+```
+GET https://open.er-api.com/v6/latest/BRL
+```
+
+**Exemplo de resposta:**
+```json
+{
+  "result": "success",
+  "base_code": "BRL",
+  "rates": {
+    "USD": 0.19,
+    "EUR": 0.17,
+    "GBP": 0.15
+  }
+}
+```
+
+---
+
+## 🛠️ Tecnologias
+
+- **HTML5** — estrutura semântica
+- **CSS3** — estilização e responsividade
+- **JavaScript (ES6+)** — lógica, `async/await`, `fetch` e `Intl.NumberFormat`
+- **Google Fonts** — família Roboto
+
+---
+
+## 📚 Conceitos praticados
+
+- Consumo de API REST com `fetch`
+- Programação assíncrona com `async/await`
+- Tratamento de erros com `try/catch/finally`
+- Manipulação do DOM
+- Formatação de moedas com a API nativa `Intl.NumberFormat`
 
 ---
 
 ## 📱 Responsividade
 
-A aplicação se adapta a telas menores que **500px** de largura, reduzindo o container principal para 90% da tela.
+O layout se adapta a telas menores que 500px, tornando o app utilizável em dispositivos móveis.
 
 ---
 
-## 🔮 Melhorias Futuras
+## 📄 Licença
 
-- Integração com uma API de câmbio em tempo real (ex: [AwesomeAPI](https://docs.awesomeapi.com.br/))
-- Suporte a mais moedas
-- Conversão nos dois sentidos, não só a partir do Real (Feito com sucesso)
-- Histórico de conversões
+Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](./LICENSE) para mais detalhes.
+
+---
+
+<p align="center">
+  Desenvolvido por <strong>DuDev</strong>
+</p>
