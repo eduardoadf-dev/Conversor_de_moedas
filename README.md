@@ -22,7 +22,7 @@ Conversor de moedas com cotações em tempo real, desenvolvido com HTML, CSS e J
 
 > Selecione as moedas, digite o valor e clique em **Converter** — ou pressione Enter.
 
-🔗 Link do projeto: https://eduardoadf-dev.github.io/Conversor_de_moedas/
+🔗 [Acesse o projeto](https://eduardoadf-dev.github.io/Conversor_de_moedas/)
 
 ---
 
